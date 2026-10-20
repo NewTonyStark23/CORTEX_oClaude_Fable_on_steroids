@@ -11,6 +11,7 @@ import DomainRouter from './components/DomainRouter'
 import ReasoningTraces from './components/ReasoningTraces'
 import ResearchTraces from './components/ResearchTraces'
 import OpusInPhi3 from './components/OpusInPhi3'
+import WeightComparison from './components/WeightComparison'
 import Footer from './components/Footer'
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'blueprint', 'capabilities', 'architecture', 'weights', 'open-weights', 'runtime', 'router', 'traces', 'research', 'opus-phi3', 'hardware']
+      const sections = ['hero', 'blueprint', 'capabilities', 'architecture', 'weights', 'open-weights', 'runtime', 'router', 'traces', 'research', 'opus-phi3', 'weight-comparison', 'hardware']
       for (const section of sections) {
         const el = document.getElementById(section)
         if (el) {
@@ -60,6 +61,7 @@ function App() {
               { id: 'traces', label: 'Traces' },
               { id: 'research', label: 'Research' },
               { id: 'opus-phi3', label: 'Opus→Phi3' },
+              { id: 'weight-comparison', label: 'Weights' },
               { id: 'hardware', label: 'HW' },
             ].map((section) => (
               <a
@@ -88,6 +90,7 @@ function App() {
       <ReasoningTraces />
       <ResearchTraces />
       <OpusInPhi3 />
+      <WeightComparison />
       <HardwareSpecs />
       <Footer />
     </div>

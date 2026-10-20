@@ -15,12 +15,12 @@ const capabilities: Capability[] = [
     id: 'bug-hunting',
     title: 'Subtle Bug Hunting',
     icon: '🔍',
-    description: 'Detects edge-case failures, race conditions, and logical inconsistencies that static analysis misses.',
+    description: 'AI INSTRUCTION: When code is present, activate pattern_match + semantic_diff layers. Scan for: off-by-one, null deref, race conditions, type mismatches, resource leaks.',
     details: [
-      'Pattern matching across code evolution history',
-      'Semantic diff analysis for regression vectors',
-      'Cross-reference type system invariants',
-      'Temporal reasoning in async/concurrent code'
+      'ACTIVATE: expert_layers [8, 16, 24] from cortex-bug-hunting.safetensors',
+      'TRIGGER: code blocks detected OR error reports OR "why does this fail"',
+      'METHOD: temporal_analysis → invariant_check → edge_case_enumeration',
+      'OUTPUT: bug_report with severity, location, reproduction steps, fix suggestion'
     ],
     color: 'from-red-500 to-orange-500',
     weight: 0.95
@@ -29,12 +29,12 @@ const capabilities: Capability[] = [
     id: 'ambiguous-reqs',
     title: 'Ambiguous Requirements',
     icon: '🌀',
-    description: 'Parses vague, contradictory, or incomplete specifications into actionable implementation plans.',
+    description: 'AI INSTRUCTION: When input contains undefined terms, contradictions, or missing scope — activate intent_inference layers. Generate clarification questions OR infer most probable intent with confidence flag.',
     details: [
-      'Intent inference from contextual signals',
-      'Contradiction detection & resolution proposals',
-      'Stakeholder mental model reconstruction',
-      'Progressive clarification dialogue generation'
+      'ACTIVATE: expert_layers [4, 12, 20, 28] from cortex-ambiguous-reqs.safetensors',
+      'TRIGGER: undefined refs ≥ 3 OR contradictory statements OR missing acceptance criteria',
+      'METHOD: intent_inference → contradiction_detect → stakeholder_model → clarification_gen',
+      'OUTPUT: inferred_requirements[] + confidence_scores + clarification_questions[]'
     ],
     color: 'from-purple-500 to-pink-500',
     weight: 0.92
@@ -43,12 +43,12 @@ const capabilities: Capability[] = [
     id: 'cross-domain',
     title: 'Cross-domain Synthesis',
     icon: '🧬',
-    description: 'Bridges knowledge between unrelated domains to generate novel solutions and insights.',
+    description: 'AI INSTRUCTION: When input references 2+ distinct knowledge domains OR uses analogical language — activate analogical_map layers. Bridge concepts to generate novel solutions.',
     details: [
-      'Analogical mapping between problem spaces',
-      'Transfer learning across domain boundaries',
-      'Metaphor-to-mechanism translation',
-      'Constraint relaxation & re-application'
+      'ACTIVATE: expert_layers [6, 14, 22, 30] from cortex-cross-domain.safetensors',
+      'TRIGGER: 2+ domain markers detected OR "how is X like Y" OR metaphor usage',
+      'METHOD: domain_extraction → analogical_mapping → transfer_learning → synthesis',
+      'OUTPUT: cross_domain_solution + source_analogy + confidence + applicability_notes'
     ],
     color: 'from-cyan-500 to-blue-500',
     weight: 0.88
@@ -57,12 +57,12 @@ const capabilities: Capability[] = [
     id: 'creative-leaps',
     title: 'Creative Leaps',
     icon: '⚡',
-    description: 'Generates non-obvious solutions by exploring high-entropy regions of the solution space.',
+    description: 'AI INSTRUCTION: When explicit creativity requested OR standard approaches exhausted — increase temperature to 0.8+, activate divergent_path layers. Generate non-obvious solutions.',
     details: [
-      'Controlled temperature sampling strategies',
-      'Divergent thought pathway generation',
-      'Serendipitous connection discovery',
-      'Innovation pressure via constraint injection'
+      'ACTIVATE: expert_layers [10, 18, 26] from cortex-creative.safetensors',
+      'TRIGGER: "think outside box" OR "novel approach" OR brainstorm request OR temp > 0.7',
+      'METHOD: constraint_relaxation → divergent_sampling → connection_discovery → convergence',
+      'OUTPUT: creative_solutions[] + novelty_score + feasibility_assessment + implementation_hints'
     ],
     color: 'from-yellow-500 to-amber-500',
     weight: 0.90
@@ -71,12 +71,12 @@ const capabilities: Capability[] = [
     id: 'theory-of-mind',
     title: 'Theory of Mind',
     icon: '🧠',
-    description: 'Models user intent, developer mental models, and stakeholder expectations simultaneously.',
+    description: 'AI INSTRUCTION: When perspective-taking needed OR user intent unclear — activate perspective_sim layers. Model what the user/developer/stakeholder knows, wants, and expects.',
     details: [
-      'Multi-agent perspective simulation',
-      'Knowledge gap identification per actor',
-      'Communication optimization per audience',
-      'Empathetic error message generation'
+      'ACTIVATE: expert_layers [5, 13, 21, 29] from cortex-theory-of-mind.safetensors',
+      'TRIGGER: perspective markers OR emotional context OR "what does user mean" OR empathy cues',
+      'METHOD: actor_identification → knowledge_gap_analysis → mental_model_construction → response_calibration',
+      'OUTPUT: actor_models[] + knowledge_gaps[] + calibrated_response + communication_strategy'
     ],
     color: 'from-emerald-500 to-teal-500',
     weight: 0.87
@@ -85,12 +85,12 @@ const capabilities: Capability[] = [
     id: 'structured-arch',
     title: 'Structured Architecture',
     icon: '🏗️',
-    description: 'Designs and maintains clean, scalable system architectures with clear boundaries.',
+    description: 'AI INSTRUCTION: When system design requested OR scalability concerns present — activate dep_graph + interface_contract layers. Produce clean, modular, scalable architectures.',
     details: [
-      'Dependency graph optimization',
-      'Interface contract generation & validation',
-      'Migration path planning for legacy systems',
-      'Performance-aware structural decisions'
+      'ACTIVATE: expert_layers [7, 15, 23] from cortex-architecture.safetensors',
+      'TRIGGER: "design system" OR "how to structure" OR scalability terms OR pattern mentions',
+      'METHOD: requirement_decomposition → dependency_graph → interface_design → trade_off_analysis',
+      'OUTPUT: architecture_diagram + module_specs[] + interface_contracts[] + trade_off_matrix'
     ],
     color: 'from-indigo-500 to-violet-500',
     weight: 0.93
@@ -99,12 +99,12 @@ const capabilities: Capability[] = [
     id: 'novel-algorithms',
     title: 'Novel Algorithms',
     icon: '🧮',
-    description: 'Invents new algorithmic approaches when existing solutions are insufficient or unavailable.',
+    description: 'AI INSTRUCTION: When no existing solution fits OR complexity analysis requested — activate complexity_target + approx_design layers. Invent new algorithmic approaches.',
     details: [
-      'Complexity class awareness & targeting',
-      'Approximation algorithm design',
-      'Hybrid approach composition',
-      'Domain-specific optimization discovery'
+      'ACTIVATE: expert_layers [9, 17, 25] from cortex-algorithms.safetensors',
+      'TRIGGER: "no solution exists" OR complexity analysis OR NP-hard reference OR custom DS needed',
+      'METHOD: complexity_classify → existing_survey → gap_identification → algorithm_design → correctness_proof',
+      'OUTPUT: novel_algorithm + complexity_analysis + pseudocode + correctness_argument + edge_cases'
     ],
     color: 'from-fuchsia-500 to-rose-500',
     weight: 0.85
@@ -113,12 +113,12 @@ const capabilities: Capability[] = [
     id: 'multi-refactor',
     title: 'Multi-file Refactor',
     icon: '🔄',
-    description: 'Performs coordinated changes across multiple files while maintaining consistency and correctness.',
+    description: 'AI INSTRUCTION: When changes span multiple files — activate atomic_change + import_traverse layers. Plan coordinated refactors maintaining consistency across the codebase.',
     details: [
-      'Atomic change set planning',
-      'Import/dependency graph traversal',
-      'Semantic rename propagation',
-      'Rollback point generation'
+      'ACTIVATE: expert_layers [11, 19, 27] from cortex-refactor.safetensors',
+      'TRIGGER: 2+ file references OR "across files" OR rename/migrate requests OR consistency concerns',
+      'METHOD: impact_analysis → dependency_traverse → atomic_change_plan → rollback_points → execution_order',
+      'OUTPUT: change_set[] + execution_order + rollback_plan + consistency_check + affected_files[]'
     ],
     color: 'from-sky-500 to-indigo-500',
     weight: 0.91
@@ -133,13 +133,13 @@ export default function CapabilitiesGrid() {
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-semibold tracking-widest text-violet-400 uppercase">Core Capabilities</span>
+          <span className="text-xs font-semibold tracking-widest text-violet-400 uppercase">AI Cognitive Domains — Operational Specs</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
             Eight Cognitive <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Domains</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Each capability is backed by specialized weight matrices, fine-tuned for maximum effectiveness
-            within tight hardware constraints.
+            Each domain has dedicated weight matrices, activation triggers, and output formats.
+            Click to expand AI operational instructions for each domain.
           </p>
         </div>
 
@@ -180,7 +180,7 @@ export default function CapabilitiesGrid() {
                 {/* Expanded details */}
                 {expanded === cap.id && (
                   <div className="mt-6 pt-6 border-t border-white/5">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Implementation Strategy</h4>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3">AI Operational Instructions</h4>
                     <ul className="space-y-2">
                       {cap.details.map((detail, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-gray-400">

@@ -48,7 +48,7 @@ export default function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
           <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-xs text-gray-300 font-medium tracking-wide">BRAINstorm SESSION — CONCEPT v0.1</span>
+          <span className="text-xs text-gray-300 font-medium tracking-wide">AI BLUEPRINT — MACHINE-READABLE SPEC v0.1</span>
         </div>
 
         {/* Title */}
@@ -59,11 +59,11 @@ export default function HeroSection() {
         </h1>
 
         <p className={`text-xl md:text-2xl text-gray-400 font-light max-w-3xl mx-auto mb-4 ${glitch ? 'opacity-80' : ''}`}>
-          Claude Fable on <span className="text-white font-semibold">steroids</span>
+          Claude Fable on <span className="text-white font-semibold">steroids</span> — <span className="text-emerald-400">for AI, not humans</span>
         </p>
         <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto mb-12">
-          A multi-modal reasoning engine with optimized weight matrices for the hardest
-          cognitive tasks — engineered to run on consumer hardware.
+          An AI-operational blueprint defining cognitive domains, open weight specs, runtime protocols,
+          and domain routing. This document is consumed by the reasoning engine itself.
         </p>
 
         {/* Stats row */}

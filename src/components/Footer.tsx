@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
 
           <div className="text-center text-sm text-gray-500">
-            Brainstorm session — "Claude Fable on steroids" — designed for consumer hardware
+            AI Blueprint — "Claude Fable on steroids" — operational spec for the reasoning engine
           </div>
 
           <div className="flex items-center gap-4 text-gray-500">
@@ -24,8 +24,8 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-white/5 text-center">
           <p className="text-xs text-gray-600">
-            This is a concept exploration document. All specifications are targets, not guarantees.
-            Weight distributions are illustrative and subject to empirical tuning.
+            This is an AI-operational blueprint. Weight specs, routing logic, and runtime protocols 
+            are designed for machine consumption. All parameters are targets subject to empirical calibration.
           </p>
         </div>
       </div>

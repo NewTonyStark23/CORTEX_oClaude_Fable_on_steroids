@@ -4,6 +4,10 @@ import CapabilitiesGrid from './components/CapabilitiesGrid'
 import ArchitectureSection from './components/ArchitectureSection'
 import HardwareSpecs from './components/HardwareSpecs'
 import WeightMatrix from './components/WeightMatrix'
+import SystemBlueprint from './components/SystemBlueprint'
+import OpenWeights from './components/OpenWeights'
+import RuntimeProtocol from './components/RuntimeProtocol'
+import DomainRouter from './components/DomainRouter'
 import Footer from './components/Footer'
 
 function App() {
@@ -11,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'capabilities', 'architecture', 'weights', 'hardware']
+      const sections = ['hero', 'blueprint', 'capabilities', 'architecture', 'weights', 'open-weights', 'runtime', 'router', 'hardware']
       for (const section of sections) {
         const el = document.getElementById(section)
         if (el) {
@@ -37,20 +41,29 @@ function App() {
               <span className="text-sm font-black">C</span>
             </div>
             <span className="text-lg font-bold tracking-tight">CORTEX</span>
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 font-medium">
-              CONCEPT DRAFT
+            <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-medium">
+              AI BLUEPRINT
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-6 text-sm text-gray-400">
-            {['capabilities', 'architecture', 'weights', 'hardware'].map((section) => (
+          <div className="hidden lg:flex items-center gap-4 text-xs text-gray-400">
+            {[
+              { id: 'blueprint', label: 'System' },
+              { id: 'capabilities', label: 'Domains' },
+              { id: 'architecture', label: 'Arch' },
+              { id: 'weights', label: 'Matrix' },
+              { id: 'open-weights', label: 'Open Wts' },
+              { id: 'runtime', label: 'Runtime' },
+              { id: 'router', label: 'Router' },
+              { id: 'hardware', label: 'HW' },
+            ].map((section) => (
               <a
-                key={section}
-                href={`#${section}`}
-                className={`capitalize transition-colors hover:text-white ${
-                  activeSection === section ? 'text-white' : ''
+                key={section.id}
+                href={`#${section.id}`}
+                className={`transition-colors hover:text-white ${
+                  activeSection === section.id ? 'text-white' : ''
                 }`}
               >
-                {section}
+                {section.label}
               </a>
             ))}
           </div>
@@ -59,9 +72,13 @@ function App() {
 
       {/* Sections */}
       <HeroSection />
+      <SystemBlueprint />
       <CapabilitiesGrid />
       <ArchitectureSection />
       <WeightMatrix />
+      <OpenWeights />
+      <RuntimeProtocol />
+      <DomainRouter />
       <HardwareSpecs />
       <Footer />
     </div>

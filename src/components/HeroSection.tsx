@@ -59,7 +59,7 @@ export default function HeroSection() {
         </h1>
 
         <p className={`text-xl md:text-2xl text-gray-400 font-light max-w-3xl mx-auto mb-4 ${glitch ? 'opacity-80' : ''}`}>
-          Claude Fable on <span className="text-white font-semibold">steroids</span> — <span className="text-emerald-400">for AI, not humans</span>
+          Claude <span className="text-white font-semibold">Opus</span> on <span className="text-fuchsia-400 font-semibold">steroids</span> — <span className="text-emerald-400">for AI, not humans</span>
         </p>
         <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto mb-12">
           An AI-operational blueprint defining cognitive domains, open weight specs, runtime protocols,
@@ -70,6 +70,7 @@ export default function HeroSection() {
         <div className="flex flex-wrap justify-center gap-8 mb-12">
           {[
             { label: 'Cognitive Domains', value: '8' },
+            { label: 'Reasoning Traces', value: '134K' },
             { label: 'Target VRAM', value: '4GB' },
             { label: 'System RAM', value: '10GB' },
             { label: 'Storage', value: '10GB' },

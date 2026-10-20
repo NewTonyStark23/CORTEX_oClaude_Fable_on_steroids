@@ -9,6 +9,7 @@ import OpenWeights from './components/OpenWeights'
 import RuntimeProtocol from './components/RuntimeProtocol'
 import DomainRouter from './components/DomainRouter'
 import ReasoningTraces from './components/ReasoningTraces'
+import ResearchTraces from './components/ResearchTraces'
 import Footer from './components/Footer'
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'blueprint', 'capabilities', 'architecture', 'weights', 'open-weights', 'runtime', 'router', 'traces', 'hardware']
+      const sections = ['hero', 'blueprint', 'capabilities', 'architecture', 'weights', 'open-weights', 'runtime', 'router', 'traces', 'research', 'hardware']
       for (const section of sections) {
         const el = document.getElementById(section)
         if (el) {
@@ -56,6 +57,7 @@ function App() {
               { id: 'runtime', label: 'Runtime' },
               { id: 'router', label: 'Router' },
               { id: 'traces', label: 'Traces' },
+              { id: 'research', label: 'Research' },
               { id: 'hardware', label: 'HW' },
             ].map((section) => (
               <a
@@ -82,6 +84,7 @@ function App() {
       <RuntimeProtocol />
       <DomainRouter />
       <ReasoningTraces />
+      <ResearchTraces />
       <HardwareSpecs />
       <Footer />
     </div>

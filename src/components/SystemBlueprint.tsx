@@ -39,7 +39,7 @@ export default function SystemBlueprint() {
             <div className="font-mono text-sm space-y-2 text-gray-300">
               <p><span className="text-emerald-400">name:</span> "CORTEX"</p>
               <p><span className="text-emerald-400">type:</span> "multi-domain reasoning engine"</p>
-              <p><span className="text-emerald-400">base:</span> "Claude Fable (enhanced)"</p>
+              <p><span className="text-emerald-400">base:</span> "Claude Opus on steroids"</p>
               <p><span className="text-emerald-400">mode:</span> "autonomous_tool_use"</p>
               <p><span className="text-emerald-400">hardware_profile:</span> "consumer_i5_4gb"</p>
               <p><span className="text-emerald-400">objective:</span> "maximize cognitive coverage within hardware constraints"</p>

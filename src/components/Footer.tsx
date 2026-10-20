@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
 
           <div className="text-center text-sm text-gray-500">
-            AI Blueprint — "Claude Fable on steroids" — operational spec for the reasoning engine
+            AI Blueprint — "Claude Opus on steroids" — operational spec for the reasoning engine
           </div>
 
           <div className="flex items-center gap-4 text-gray-500">
